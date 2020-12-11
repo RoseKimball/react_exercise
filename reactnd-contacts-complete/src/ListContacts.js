@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class ListContacts extends Component {
   state = {
@@ -38,6 +39,7 @@ class ListContacts extends Component {
             value={query}
             onChange={e => this.handleOnChange(e.target.value)}
           />
+          <Link to="/create" className="add-contact"></Link>
         </div>
         <ol className="contact-list">
           {showingContacts.map(contact => (
